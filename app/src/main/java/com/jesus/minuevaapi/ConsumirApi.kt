@@ -1,21 +1,26 @@
 package com.jesus.minuevaapi
 
-import retrofit2.Call
+import okhttp3.ResponseBody
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.PUT
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ConsumirApi {
     @GET("todos")
     suspend fun getTasks(@Query("rut") rut : String) : List<TasksResponse>
 
-    @GET("todos")
-    fun getTraer(@Query("rut") rut: String) : Call<TasksResponse>
-    @GET("todos")
-    fun getTraerTodos(@Query("rut") rut: String): Call<TasksResponse>
+    @POST("events") // Reemplaza "endpoint" con tu URL de API
+    suspend fun postTasks(@Body taskData: TasksResponse): Response<ResponseBody>
 
+    @PUT("/todos/{todo_id}")
+    suspend fun updateTask(@Path("todo_id") todoId: String, @Body updatedData: TasksResponse): Response<Void>
 
-    @POST("/events")
-    fun postCrearTarea(@Query("title") title:String , @Query("description") description : String, @Query("rut")rut: String) : Call<TasksResponse>
+    @DELETE("/todos/{todo_id}")
+    suspend fun deleteTask(@Path("todo_id") todoId: String): Response<Void>
 
-    }
+}

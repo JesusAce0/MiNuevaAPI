@@ -3,7 +3,7 @@ package com.jesus.minuevaapi
 import com.google.gson.annotations.SerializedName
 
 data class TasksResponse(
-    @SerializedName("_id") val id: String,
+    @SerializedName("_id") val id: String?,
     @SerializedName("description") val description: String,
     @SerializedName("rut") val rut: String,
     @SerializedName("title") val title: String

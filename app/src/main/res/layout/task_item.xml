@@ -8,7 +8,7 @@
     <!-- Divisor -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:outlineSpotShadowColor="@color/black"
         android:background="?android:attr/dividerHorizontal" />
 
@@ -16,27 +16,24 @@
         android:id="@+id/tvTaskTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tvTaskDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"/>
+        android:textSize="14sp"/>
 
     <TextView
         android:id="@+id/tvTaskID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"/>
+        android:textSize="14sp"/>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:outlineAmbientShadowColor="@color/black"
         android:background="?android:attr/dividerHorizontal" />
-
-
-
 
 </LinearLayout>

@@ -6,36 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/lblMostrarTask"
-        android:layout_width="286dp"
-        android:layout_height="67dp"
-        android:text="Hello World!"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGet"
-        app:layout_constraintVertical_bias="0.121" />
-
     <Button
         android:id="@+id/btnGet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="536dp"
+        android:width="100dp"
+        android:height="60dp"
         android:text="GET"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRut"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etRut"
         android:layout_width="302dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:background="@color/light_grey"
         android:ems="14"
         android:hint="Ingrese rut: "
@@ -44,18 +32,102 @@
         android:textColorHint="@color/grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintHorizontal_bias="0.412"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.01" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTasks"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblMostrarTask"
-        app:layout_constraintVertical_bias="0.692"
+        app:layout_constraintTop_toBottomOf="@+id/btnGet"
+        app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/txtIDTask"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_height="50dp"
+        android:ems="16"
+        android:inputType="text"
+        android:hint="ID tarea"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvTasks"
+        app:layout_constraintVertical_bias="0.271" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvTasks"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <EditText
+        android:id="@+id/txtTitleTask"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:inputType="text"
+        android:hint="Titulo"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIDTask" />
+
+    <EditText
+        android:id="@+id/txtDescriptionTask"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Descripcion"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleTask" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="102dp"
+        android:layout_height="52dp"
+        android:text="UPDATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvTasks"
+        app:layout_constraintVertical_bias="0.848" />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="102dp"
+        android:layout_height="49dp"
+        android:text="DELETE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvTasks"
+        app:layout_constraintVertical_bias="0.843" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
